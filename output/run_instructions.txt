@@ -1,0 +1,9 @@
+# To Build the Docker Image:
+docker build --platform linux/amd64 -t pdf-outline-extractor:demo123 .
+
+# To Run the Docker Container (PowerShell):
+docker run --rm `
+  -v "$(Get-Location)\input:/app/input" `
+  -v "$(Get-Location)\output:/app/output" `
+  --network none `
+  pdf-outline-extractor:demo123
